@@ -1,0 +1,19 @@
+# MCU name
+MCU = RP2040
+BOOTLOADER = rp2040
+BOARD = GENERIC_RP_RP2040
+
+SERIAL_DRIVER = vendor
+
+MOUSEKEY_ENABLE = yes    # Mouse keys
+
+RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = WS2812
+WS2812_DRIVER = vendor
+
+OLED_ENABLE     = no
+OLED_DRIVER     = SSD1306
+
+LTO_ENABLE      = yes
+
+SRC += ./rgb.c
