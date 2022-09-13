@@ -22,7 +22,7 @@
 const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_ZER),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_ZER),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _OFF,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -39,18 +39,18 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, KEYBASE, KEYBASE, KEYBASE, KEYBASE, KEYBASE,                      USE_LYR, KEYBASE, USE_LYR, USE_LYR, USE_LYR,    _OFF,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           _SPACE, KEYBASE,  _MOUSE,     _SPACE, _DELETE,  _ENTER
+                                           _SPACE,    _MOD,  _MOUSE,     _SPACE, _DELETE,  _ENTER
                                       //`--------------------------'  `--------------------------'    
     ),
     [_ARR] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KEYBASE,   _FUNC,   _FUNC,   _FUNC,   _FUNC,   _FUNC,                        _FUNC,   _FUNC,   _FUNC,   _FUNC,   _FUNC,   _FUNC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KEYBASE, KEYBASE, KEYBASE, KEYBASE,     SYM,    _MOD,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR,     SYM,   _FUNC,
+      KEYBASE, KEYBASE, KEYBASE, KEYBASE,     SYM,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR,     SYM,   _FUNC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, KEYBASE, KEYBASE, KEYBASE, KEYBASE, KEYBASE,                          SYM,     SYM,     SYM,     SYM,  _ENTER,    _OFF,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           _SPACE, KEYBASE, KEYBASE,     _SPACE, _DELETE,  _ENTER
+                                           _SPACE,    _MOD, KEYBASE,     _SPACE, _DELETE,  _ENTER
                                       //`--------------------------'  `--------------------------'    
     ),
     [_NUM] = LAYOUT_split_3x6_3(
@@ -59,14 +59,14 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE,   _MOVE, KEYBASE, KEYBASE, KEYBASE, KEYBASE,                      _NPSIDE, USE_LYR, USE_LYR, USE_LYR, _NPSIDE, KEYBASE,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KEYBASE,   _MOVE,   _MOVE, KEYBASE, KEYBASE, KEYBASE,                      _NPSIDE, USE_LYR, USE_LYR, USE_LYR, _NPSIDE, KEYBASE,
+      KEYBASE,   _MOVE,   _MOVE, KEYBASE, KEYBASE, KEYBASE,                      KEYBASE, USE_LYR, USE_LYR, USE_LYR, _NPSIDE, KEYBASE,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           _SPACE, KEYBASE,  _MOUSE,    USE_LYR, _DELETE,  _ENTER
+                                           _SPACE,    _MOD,  _MOUSE,    USE_LYR, _DELETE,  _ENTER
                                       //`--------------------------'  `--------------------------'    
     ),
     [_ZER] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_ONE),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_ONE),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _OFF,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -77,7 +77,7 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ONE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_TWO),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_TWO),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _OFF,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -88,7 +88,7 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_TWO] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_TRE),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_TRE),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _MOD,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -99,7 +99,7 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_TRE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_FOR),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_FOR),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _MOD,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -110,7 +110,7 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_FOR] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_COL),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_COL),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,    _OFF,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -121,7 +121,7 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_COL] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_QWERTY),
+      KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_QWERTY),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  _ENTER,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -138,10 +138,10 @@ void determine_key_color(RGB* retval, const keypos_t pos, const uint8_t layer) {
     if (IS_CLASS(rgb_code)) {
         *retval = class_colors[GET_BODY(rgb_code)];
     } else if (IS_LAYER(rgb_code)) {
-        *retval = layer_colors[layer];
+        *retval = layer_colors[layer].keyglow;
     } else if (IS_REFERNCE(rgb_code)) {
-        *retval = layer_colors[GET_BODY(rgb_code)];
-    } else { // IS_KEYBASE
+        *retval = layer_colors[GET_BODY(rgb_code)].keyglow;
+    } else if (IS_KEYBASED(rgb_code)) {
         switch(keycode) {
             case KC_ESC: case KC_BSPC:
                 *retval = class_colors[_DELETE];
@@ -150,7 +150,7 @@ void determine_key_color(RGB* retval, const keypos_t pos, const uint8_t layer) {
                 *retval = class_colors[_OFF];
                 break;
             case KC_SPC:
-                *retval = layer_colors[layer];
+                *retval = layer_colors[layer].keyglow;
                 break;
             case KC_ENT:
                 *retval = class_colors[_ENTER];
@@ -170,31 +170,38 @@ void determine_key_color(RGB* retval, const keypos_t pos, const uint8_t layer) {
                 *retval = class_colors[_OFF];
                 break;
         }
-    } 
+    } else if (IS_INDICATOR_KEY(rgb_code)) {
+        if (GET_BODY(rgb_code) == _CAPS_IND && host_keyboard_led_state().caps_lock) {
+            *retval = class_colors[_BOOT];
+        } else {
+            *retval = layer_colors[layer].keyglow;
+        }
+    } else {
+        *retval = class_colors[_OFF];
+    }
 }
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     const uint8_t layer = get_highest_layer(layer_state | default_layer_state);
     // Perform the underglow.
-    const RGB l_color = layer_colors[layer];
+    const layer_color_set_t l_color = layer_colors[layer];
     for (uint8_t i = led_min; i <= led_max; i++) {
         if (HAS_FLAGS(g_led_config.flags[i], LED_FLAG_UNDERGLOW)) {
-            rgb_matrix_set_color(i, l_color.r, l_color.g, l_color.b);
+            SET_COLOR(i, l_color.underglow);
         }
     }
 
     // Set the key colors.
     for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
         for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
-            uint8_t index = g_led_config.matrix_co[row][col];
-            if (index < led_min || index > led_max || index == NO_LED) {
+            uint8_t i = g_led_config.matrix_co[row][col];
+            if (i < led_min || i > led_max || i == NO_LED) {
                 continue;
             }
 
             RGB color;
-            const keypos_t pos = {.col = col, .row = row};
-            determine_key_color(&color, pos, layer);
-            rgb_matrix_set_color(index, color.r, color.g, color.b);
+            determine_key_color(&color, MAKE_KEYPOS(row, col), layer);
+            SET_COLOR(i, color);
         }
     }
 }
