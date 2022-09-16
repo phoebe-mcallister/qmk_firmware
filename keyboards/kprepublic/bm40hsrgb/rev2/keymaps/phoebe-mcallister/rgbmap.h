@@ -72,13 +72,7 @@ const layer_color_set_t layer_colors[] = {
     [_QWERTY] = {{.r = 0x1d, .g = 0x0a, .b = 0x2d}, {.r = 0x74, .g = 0x28, .b = 0xB4}},
     [_NUM] =    {{.r = 0x07, .g = 0x19, .b = 0x18}, {.r = 0x1C, .g = 0x64, .b = 0x60}},
     [_ARR] =    {{.r = 0x20, .g = 0x18, .b = 0x05}, {.r = 0x80, .g = 0x60, .b = 0x14}},
-    [_SYM] =    {{.r = 0x16, .g = 0x33, .b = 0x00}, {.r = 0x58, .g = 0xCC, .b = 0x00}},
-    [_ZER] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER},
-    [_ONE] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER},
-    [_TWO] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER},
-    [_TRE] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER},
-    [_FOR] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER},
-    [_COL] =    {COLOR_COLEMAK_KEY, COLOR_COLEMAK_UNDER}
+    [_SYM] =    {{.r = 0x16, .g = 0x33, .b = 0x00}, {.r = 0x58, .g = 0xCC, .b = 0x00}}
 };
 
 const RGB class_colors[] = {

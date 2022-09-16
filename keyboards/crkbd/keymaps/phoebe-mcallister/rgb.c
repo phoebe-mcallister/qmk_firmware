@@ -19,7 +19,7 @@
 #include "keycodes.h"
 #include "rgbmap.h"
 
-const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
+const uint8_t rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       KEYBASE, USE_LYR, USE_LYR, USE_LYR, USE_LYR,  I_CAPS,                      USE_LYR, USE_LYR, USE_LYR, USE_LYR, USE_LYR,REF_LYR(_ZER),
@@ -134,50 +134,58 @@ const uint8_t PROGMEM rgb_class_maps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void determine_key_color(RGB* retval, const keypos_t pos, const uint8_t layer) {
     const uint8_t rgb_code = rgb_class_maps[layer][pos.row][pos.col];
-    const uint16_t keycode = keymap_key_to_keycode(layer, pos);
-    if (IS_CLASS(rgb_code)) {
-        *retval = class_colors[GET_BODY(rgb_code)];
-    } else if (IS_LAYER(rgb_code)) {
-        *retval = layer_colors[layer].keyglow;
-    } else if (IS_REFERNCE(rgb_code)) {
-        *retval = layer_colors[GET_BODY(rgb_code)].keyglow;
-    } else if (IS_KEYBASED(rgb_code)) {
-        switch(keycode) {
-            case KC_ESC: case KC_BSPC:
-                *retval = class_colors[_DELETE];
-                break;
-            case XXXXXXX:
-                *retval = class_colors[_OFF];
-                break;
-            case KC_SPC:
-                *retval = layer_colors[layer].keyglow;
-                break;
-            case KC_ENT:
-                *retval = class_colors[_ENTER];
-                break;
-            case QK_BOOT:
-                *retval = class_colors[_BOOT];
-                break;
-            case KC_LCTL: case KC_RCTL: case KC_LCMD: case KC_RCMD:
-            case KC_LALT: case KC_RALT: case KC_LSFT: case KC_RSFT:
-                *retval = class_colors[_MOD];
-                break;
-            case KC_BTN1: case KC_BTN2: case KC_BTN3: case KC_BTN4:
-            case KC_BTN5: case KC_BTN6: case KC_BTN7: case KC_BTN8:
-                *retval = class_colors[_MOUSE];
-                break;
-            default:
-                *retval = class_colors[_OFF];
-                break;
-        }
-    } else if (IS_INDICATOR_KEY(rgb_code)) {
-        if (GET_BODY(rgb_code) == _CAPS_IND && host_keyboard_led_state().caps_lock) {
-            *retval = class_colors[_BOOT];
-        } else {
+    const uint8_t body = GET_BODY(rgb_code);
+
+    switch(GET_TYPE(rgb_code)) {
+        case TYPE_CLASS:
+            *retval = class_colors[body];
+            break;
+        case TYPE_LAYER:
             *retval = layer_colors[layer].keyglow;
-        }
-    } else {
-        *retval = class_colors[_OFF];
+            break;
+        case TYPE_REFERENCE:
+            *retval = layer_colors[body].keyglow;
+            break;
+        case TYPE_INDICATOR:
+            if (body == _CAPS_IND && host_keyboard_led_state().caps_lock) {
+                *retval = class_colors[_BOOT];
+            } else {
+                *retval = layer_colors[layer].keyglow;
+            }
+            break;
+        case TYPE_KEYBASE:
+            switch(keymap_key_to_keycode(layer, pos)) {
+                case KC_ESC: case KC_BSPC:
+                    *retval = class_colors[_DELETE];
+                    break;
+                case XXXXXXX:
+                    *retval = class_colors[_OFF];
+                    break;
+                case KC_SPC:
+                    *retval = layer_colors[layer].keyglow;
+                    break;
+                case KC_ENT:
+                    *retval = class_colors[_ENTER];
+                    break;
+                case QK_BOOT:
+                    *retval = class_colors[_BOOT];
+                    break;
+                case KC_LCTL: case KC_RCTL: case KC_LCMD: case KC_RCMD:
+                case KC_LALT: case KC_RALT: case KC_LSFT: case KC_RSFT:
+                    *retval = class_colors[_MOD];
+                    break;
+                case KC_BTN1: case KC_BTN2: case KC_BTN3: case KC_BTN4:
+                case KC_BTN5: case KC_BTN6: case KC_BTN7: case KC_BTN8:
+                    *retval = class_colors[_MOUSE];
+                    break;
+                default:
+                    *retval = class_colors[_OFF];
+                    break;
+            }
+            break;
+        default:
+            *retval = class_colors[_OFF];
+            break;
     }
 }
 

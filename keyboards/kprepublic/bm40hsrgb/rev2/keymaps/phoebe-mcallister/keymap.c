@@ -14,25 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-
-enum layers {
-  _QWERTY,
-  _SYM,
-  _NUM,
-  _ARR
-};
-
-#define MSYM LT(_SYM, KC_M)
-#define VSYM LT(_SYM, KC_V)
-#define BNUM LT(_NUM, KC_B)
-#define XARR LT(_ARR, KC_X)
-
-#define CTLUP LCTL(KC_UP)
-#define CTLLEFT LCTL(KC_LEFT)
-#define CTLRGHT LCTL(KC_RGHT)
-
-#define ZSFT LSFT_T(KC_Z)
-#define SLSHFT RSFT_T(KC_SLSH)
+#include "keycodes.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
